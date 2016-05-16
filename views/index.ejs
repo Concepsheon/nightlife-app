@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title>The NightLife</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="icon" href="data:;base64,=">
+  </head>
+  <body ng-controller="ResultsCtrl">
+    
+    <div><% include login %></div>
+    
+    <div id="yelp_logo">
+      <p>Made using <img class="logo" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/www_pages/95212dafe621/assets/img/brand_guidelines/yelp-2c.png" alt="yelp logo"/></p>
+    </div>
+    
+    <!--<input type="text" ng-model="search"/>-->
+    
+    <h4>Search</h4> <input class="form-control search" type="text" ng-model="area" ng-model-options="{debounce:800}"/>
+    
+    <div><% include bars %></div>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="/javascripts/app.js"></script>
+  <script src="/javascripts/factory.js"></script>
+  
+  </body>
+</html>

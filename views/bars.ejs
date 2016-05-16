@@ -1,0 +1,17 @@
+
+
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="business in businesses">
+    <img class="thumbnail" ng-src={{business.image_url}} alt="photo of {{business.name}}"/>
+    <a href="{{business.url}}" class="business_url"><strong>{{business.name}}</strong></a> 
+    
+    <div ng-controller="NavCtrl">
+      <a href="#">Going <span class="badge">{{count}}</span></a>
+      <button ng-show="isLoggedIn()" class="btn btn-default" ng-click="join()">Going</button>
+    </div>
+    
+    <p>{{business.snippet_text}}</p>
+    
+  </li>
+</ul>
+
